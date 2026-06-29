@@ -7,7 +7,7 @@ export const connectDB = async () => {
     //Avoid depreceation noise and make queries fast 
     mongoose.set("strictQuery", true);
 
-    const uri = process.env.MONGO_URI;
+    let uri = process.env.MONGO_URI;
 
     const useMemoryDB = process.env.USE_MEMORY_DB === "true" || !uri;
 

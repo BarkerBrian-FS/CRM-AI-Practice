@@ -3,8 +3,8 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 
-import { connectDB } from "./config/db.js";
-import { notFound, errrorHandler } from "./middleware/error.middleware";
+import { connectDB, stopDB  } from "./config/db.js";
+import { notFound, errorHandler } from "./middleware/error.middleware.js";
 
 const app = express();
 
@@ -28,19 +28,19 @@ app.get("/api/health", (req, res) =>
 
 /**------------------- Errror Handling------------------- */
 app.use(notFound);
-app.use(errrorHandler);
+app.use(errorHandler);
 
 /**-------------------- Boot --------------------------- */
-const PORT = process.env.PORT || 8000;
+let PORT = process.env.PORT || 8000;
 
 const start = async () => {
     try {
         await connectDB();
         app.listen(PORT, () =>
-            console.log(`CRM API running on http://localhost:${PORT}`)
+            console.log(`🚀 CRM API running on http://localhost:${PORT}`)
         )
     } catch (error) {
-        console.error("Failed to start server:", err.message);
+        console.error("❌ Failed to start server:", error.message);
         process.exit(1);
     }
 }
