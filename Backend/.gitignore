@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+#dependencies
 node_modules
 node_modules/
 dist
@@ -24,6 +25,9 @@ dist-ssr
 *.sln
 *.sw?
 
-#Env Variables
+#Env variables
 .env
 .env.*
+
+# local database / memory artifacts
+*.db
