@@ -11,7 +11,7 @@ export function HeroCard({ value = 0, label = "Pipeline value" }) {
     <Card className="p-6">
       <SectionHeading title="Pipeline Goal" subtitle="Total deal value" to="/pipeline" />
 
-      <div className="brand-gradient relative mt-5 overflow-hidden rounded-2xl p-5 text-white shadow-[var(--shadow-soft)]">
+      <div className="brand-gradient relative mt-5 overflow-hidden rounded-2xl p-5 text-white shadow-(--shadow-soft)">
         {/* Decorative glow */}
         <div className="absolute -right-10 -top-12 h-40 w-40 rounded-full bg-white/10 blur-2xl" />
 

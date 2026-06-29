@@ -11,7 +11,7 @@ export function StatCard({ label, value, icon: Icon, trend, accent = false }) {
   return (
     <Card
       className={cn(
-        "p-5 transition hover:shadow-[var(--shadow-pop)]",
+        "p-5 transition hover:shadow-(--shadow-pop)",
         accent && "brand-gradient text-white"
       )}
     >

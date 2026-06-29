@@ -53,7 +53,7 @@ export function Sidebar({ onNavigate }) {
               )
             }
           >
-            <Icon className="h-[18px] w-[18px]" />
+            <Icon className="h-4.5 w-4.5" />
             {label}
           </NavLink>
         ))}
@@ -73,14 +73,14 @@ export function Sidebar({ onNavigate }) {
             )
           }
         >
-          <Settings className="h-[18px] w-[18px]" />
+          <Settings className="h-4.5 w-4.5" />
           Settings
         </NavLink>
         <button
           onClick={logout}
           className="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-ink-soft transition hover:bg-rose-50 hover:text-rose-600"
         >
-          <LogOut className="h-[18px] w-[18px]" />
+          <LogOut className="h-4.5 w-4.5" />
           Log out
         </button>
       </div>

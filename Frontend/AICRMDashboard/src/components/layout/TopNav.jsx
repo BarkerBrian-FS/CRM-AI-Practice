@@ -47,7 +47,7 @@ export function TopNav({ onMenuClick }) {
       </button>
 
       {/* Centered nav pill */}
-      <nav className="mx-auto hidden items-center gap-1 rounded-full bg-surface p-1.5 shadow-[var(--shadow-soft)] lg:flex">
+      <nav className="mx-auto hidden items-center gap-1 rounded-full bg-surface p-1.5 shadow-(--shadow-soft) lg:flex">
         {LINKS.map(({ to, label, end }) => (
           <NavLink
             key={to}
@@ -70,10 +70,10 @@ export function TopNav({ onMenuClick }) {
       {/* Right cluster */}
       <div className="ml-auto flex items-center gap-2">
         <IconButton aria-label="Search" className="hidden sm:inline-flex">
-          <Search className="h-[18px] w-[18px]" />
+          <Search className="h-4.5 w-4.5" />
         </IconButton>
         <IconButton aria-label="Notifications" className="relative">
-          <Bell className="h-[18px] w-[18px]" />
+          <Bell className="h-4.5 w-4.5" />
           <span className="absolute right-2.5 top-2.5 h-2 w-2 rounded-full bg-brand-500 ring-2 ring-surface" />
         </IconButton>
 

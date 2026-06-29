@@ -38,7 +38,7 @@ export function Topbar({ onMenuClick }) {
           className="relative rounded-full border border-line bg-surface p-2.5 text-ink-soft transition hover:text-ink"
           aria-label="Notifications"
         >
-          <Bell className="h-[18px] w-[18px]" />
+          <Bell className="h-4.5 w-4.5" />
           <span className="absolute right-2.5 top-2.5 h-2 w-2 rounded-full bg-brand-500 ring-2 ring-surface" />
         </button>
 
