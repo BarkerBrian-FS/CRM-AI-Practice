@@ -41,10 +41,9 @@ export const updateContact = asyncHandler(async (req, res) => {
 
 export const deleteContact = asyncHandler(async (req, res) => {
     const contact = await Contact.findOneAndDelete(
-        { id: req.params.id, owner: req.user._id }
+        { _id: req.params.id, owner: req.user._id }
     );
     if(!contact) throw new ApiError(404, "Contact not found");
     res.json({ success: true, message: "Contact deleted" });
 });
 
-export const 
