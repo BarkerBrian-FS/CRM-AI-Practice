@@ -16,7 +16,7 @@ export const getLeads = asyncHandler( async (req, res) => {
         filter.$or = [{ name: rx },{ email: rx },{company: rx }];
     };
 
-    const leads = (await Lead.find(filter)).toSorted({ order: 1, createdAt: -1 });
+    const leads = await Lead.find(filter).sort({ order: 1, createdAt: -1 });
     res.json({ success: true, count: leads.length, leads });
 })
 
