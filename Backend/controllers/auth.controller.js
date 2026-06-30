@@ -14,6 +14,9 @@ const toClientUser = (user) => ({
 });
 
 export const register = asyncHandler(async (req, res) => {
+
+    console.log("hit register route");
+
     const { name, email, password, company } = req.body;
 
     if( !name || !email || !password ){
@@ -35,6 +38,9 @@ export const register = asyncHandler(async (req, res) => {
 });
 
 export const login = asyncHandler(async (req, res) => {
+
+    console.log("hit login route");
+
     const { email, password } = req.body;
 
     if( !email || !password ){
@@ -54,10 +60,16 @@ export const login = asyncHandler(async (req, res) => {
 });
 
 export const getMe = asyncHandler(async (req, res) => {
+
+    console.log("hit getMe route");
+
     res.json({ success: true, user: toClientUser(req.user) });
 });
 
 export const updateProfile = asyncHandler(async (req, res) => {
+
+    console.log("hit updateProfile route");
+
     const { name, company, avatar, password } = req.body;
     const user = req.user;
 
