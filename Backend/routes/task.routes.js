@@ -1,11 +1,9 @@
 import { Router } from "express";
 import {
-    getLeads,
-    getLead,
-    createLead,
-    updateLead,
-    deleteLead,
-    reorderLeads
+    getTasks,
+    createTask,
+    updateTask,
+    deleteTask,
 } from "../controllers/lead.controller.js"
 import { protect } from "../middleware/auth.middleware.js";
 
@@ -13,8 +11,7 @@ const router = Router();
 
 router.use(protect);
 
-router.patch("/reorder", reorderLeads);
-router.route("/").get(getLeads).post(createLead);
-router.route("/:id").get(getLead).put(updateLead).delete(deleteLead);
+router.route("/").get(getTasks).post(createTask);
+router.route("/:id").put(updateTask).delete(deleteTask);
 
 export default router;
