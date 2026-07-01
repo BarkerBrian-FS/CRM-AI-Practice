@@ -1,17 +1,18 @@
 import { Router } from "express";
 import {
-    register, 
-    login,
-    getMe, 
-    updateProfile,
-} from "../controllers/auth.controller.js";
+    aiStatus, 
+    leadSummary,
+    generateEmailDraft, 
+    salesInsights,
+} from "../controllers/ai.controller.js";
 import { protect } from "../middleware/auth.middleware.js";
 
 const router = Router();
+router.use(protect);
 
-router.post("/register", register);
-router.post("/login", login);
-router.get("/me", protect, getMe);
-router.put("/profile", protect, updateProfile);
+router.post("/status", aiStatus);
+router.post("/lead-summary", leadSummary);
+router.get("/generate-email", generateEmailDraft);
+router.put("/sales-insights", salesInsights);
 
 export default router;

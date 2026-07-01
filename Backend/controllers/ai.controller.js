@@ -26,7 +26,7 @@ export const aiStatus = asyncHandler(async (req, res) => {
     });
 });
 
-export const leadSummmary = asyncHandler(async (req, res) => {
+export const leadSummary = asyncHandler(async (req, res) => {
     const lead = await resolveLead(req);
     const result = await generateLeadSummary(lead);
 
