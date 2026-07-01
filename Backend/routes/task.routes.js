@@ -4,7 +4,7 @@ import {
     createTask,
     updateTask,
     deleteTask,
-} from "../controllers/lead.controller.js"
+} from "../controllers/task.controller.js"
 import { protect } from "../middleware/auth.middleware.js";
 
 const router = Router();
